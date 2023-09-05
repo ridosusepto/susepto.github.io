@@ -1,0 +1,657 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-color: #081b28;
+    --second-bg-color: #112e42;
+    --text-color: #dedede --main-color: #00abf0;
+}
+
+html {
+    font-size: 62.5;
+    overflow-x: hidden;
+}
+
+.heading {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: #dedede;
+}
+
+span {
+    color: #00abf0;
+}
+
+.btn-box a {
+    margin-right: 10px;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 100%;
+    background: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    /* Change from -1 to 1 */
+    overflow: hidden;
+    transition: background-color 0.5s;
+
+}
+
+.btn-box a:hover {
+    color: #00abf0;
+}
+
+.btn-box a:nth-child(2) {
+    background: transparent;
+    color: #00abf0;
+    margin-right: 0;
+}
+
+.btn-box a:nth-child(2):hover {
+    color: #081b29;
+}
+
+.btn-box a:nth-child(2)::before {
+    background: #00abf0;
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: #081b29;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box a:hover {
+    background-color: #081b29;
+    /* Change background color on hover */
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+}
+
+.btn-box {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.btn-box {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.tentang-img {
+    position: relative;
+    width: 25rem;
+    height: 26rem;
+    border-radius: 50%;
+    overflow: hidden;
+    /* Menambahkan overflow untuk memastikan konten gambar tidak keluar dari lingkaran */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tentang-img img {
+    width: 90%;
+    /* Menggunakan 100% untuk memastikan gambar mengisi seluruh area kontainer */
+    border-radius: 50%;
+    border: 0.2rem solid #00abf0;
+    /* Mengubah "solod" menjadi "solid" dan menyesuaikan properti border */
+}
+
+.tentang-img .circle-spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-top: .2rem solid #081b28;
+    border-bottom: .2rem solid #081b28;
+    border-left: .2rem solid #00abf0;
+    border-right: .2rem solid #00abf0;
+}
+
+
+.about-content h3 {
+    font-size: 30px;
+    font-weight: 800;
+    color: #00abf0;
+    line-height: 1, 2;
+
+}
+
+.about-content p {
+    max-width: 1010px;
+    font-size: 16px;
+    margin: 10px 0 20px;
+    color: #dedede;
+}
+
+.about-conten p {
+    max-width: 2000px;
+    font-size: 16px;
+    margin: 10px 0 20px;
+    color: #dedede;
+}
+
+
+.Education {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: auto;
+    padding-bottom: 0.5rem;
+    /* Mengurangi jarak bawah */
+}
+
+.Education .Education-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    /* Mengurangi jarak antara kolom */
+    justify-content: center;
+    align-items: center;
+}
+
+.Education-row .Education-colom {
+    flex: 1 1 calc(50% - 0.5rem);
+    /* Mengurangi jarak samping dan menggunakan calc */
+}
+
+.Education-colom .title {
+    font-size: 1.2rem;
+    /* Mengurangi ukuran font judul */
+    margin: 0 0 0.5rem 0.5rem;
+    /* Mengurangi margin bawah dan samping judul */
+}
+
+.Education-colom .Education-box {
+    border-left: 0.2rem solid #00abf0;
+}
+
+.Education-box .Education-content {
+    position: relative;
+    padding: 1.5rem;
+    /* Mengurangi padding */
+}
+
+.Education-box .Education-content ::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -2.3rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #00abf0;
+    /* border-radius: 50%; */
+}
+
+.Education-content .content {
+    position: relative;
+    padding: 1rem;
+    /* Mengurangi padding */
+    border: 0.2rem solid #00abf0;
+    border-radius: 0.3rem;
+    /* Mengurangi radius border */
+    margin-bottom: 0.1rem;
+    /* Mengurangi margin bawah */
+    overflow: hidden;
+}
+
+.Education-content .content ::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: #112e42;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.Education-content .content :hover ::before {
+    width: 100%;
+}
+
+.Education-content .content .year {
+    /* font-size: 1.2rem; */
+    /* Mengurangi ukuran font tahun */
+    color: #00abf0;
+    padding-bottom: 0.3rem;
+    /* Mengurangi padding bawah */
+}
+
+.Education-content .content .year.bx bxs-calendar {
+    color: #00abf0;
+}
+
+.Education-content .content .year i {
+    padding-right: 0.3rem;
+}
+
+.Education-content .content .year h3 {
+    font-size: 1.8rem;
+}
+
+.Education-content .content .year p {
+    font-size: 1.4rem;
+    padding-top: 0.3rem;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style the skills section */
+.skills {
+    max-width: 600px;
+    /* Set max-width for the skills section */
+    margin: 0 auto;
+    /* Center the skills section */
+    padding: 30px;
+    /* Adjust padding for spacing */
+    background-color: #081b28;
+}
+
+.skills-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Change align-items to center */
+    margin-top: 20px;
+    /* Adjust margin-top for spacing */
+}
+
+.skills-column {
+    flex: 1;
+    border: 1px solid #00abf0;
+    padding: 15px;
+    /* Adjust padding for spacing */
+    border-radius: 7px;
+    margin-right: 10px;
+}
+
+.title {
+    font-size: 1.2rem;
+    /* Adjust font size for smaller title */
+    margin-bottom: 8px;
+    /* Adjust margin-bottom for spacing */
+}
+
+.progress {
+    margin-bottom: 10px;
+    /* Adjust margin-bottom for spacing */
+}
+
+.progress h3 {
+    font-size: 1rem;
+    margin-bottom: 4px;
+    /* Adjust margin-bottom for spacing */
+}
+
+.progress p {
+    font-size: 0.8rem;
+    margin-bottom: 4px;
+    /* Adjust margin-bottom for spacing */
+}
+
+.bar {
+    background-color: #dedede;
+    height: 8px;
+    /* Adjust height for smaller bar */
+    border-radius: 4px;
+    /* Adjust border radius for smaller bar */
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.bar:hover {
+    background-color: #00abf0;
+}
+
+.bar span {
+    display: block;
+    background-color: #00abf0;
+    height: 100%;
+    /* Change height to 100% */
+    border-radius: 4px;
+    /* Adjust border radius for smaller bar */
+    width: 20%;
+    /* Set initial width */
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.bar:hover span {
+    background-color: #dedede;
+}
+
+.skills-column:hover {
+    border-color: #dedede;
+}
+
+/* Media query for responsive design */
+@media (max-width: 768px) {
+    .skills-row {
+        flex-direction: column;
+        align-items: center;
+        /* Center align items for responsive layout */
+    }
+}
+
+
+
+
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style the contact section */
+.contact {
+    padding: 50px;
+    height: 100vh;
+    background: url(views/images/Valoran.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    /* background-color: #081b28; */
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Style the form */
+/* Style the form */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: transparent;
+    /* Set background color */
+    padding: 20px;
+    /* Add padding for better readability */
+    border-radius: 5px;
+    /* Add border radius for a rounded look */
+}
+
+.input-box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.input-field {
+    position: relative;
+    flex: 1;
+    margin-right: 10px;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 3px solid #00abf0;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: transparent;
+    /* Make background transparent */
+    color: #dedede;
+    /* Set text color */
+}
+
+.focus {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.3s ease;
+}
+
+.input-field input[type="text"]:focus~.focus,
+.input-field input[type="number"]:focus~.focus,
+.textarea-field textarea:focus~.focus {
+    transform: scaleX(1);
+}
+
+.textarea-field textarea {
+    resize: vertical;
+}
+
+/* Style the submit button */
+.btn1-box {
+    margin-right: 10px;
+    position: relative;
+    display: flex;
+    /* Change to flex */
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100%;
+    background: #00abf0;
+    border: 1px solid #00abf0;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: background-color 0.5s;
+}
+
+/* Center the text in the button */
+.btn1-box span {
+    display: inline-block;
+    transform: translateY(-2px);
+    /* Adjust vertical alignment */
+}
+
+.btn {
+    background-color: #00abf0;
+    color: #081b29;
+    padding: 10px 20px;
+    border: 1px solid #00abf0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    color: #00abf0;
+    background-color: #112e42;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+
+
+/* Style the footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: #081b28;
+}
+
+.footer-text {
+    font-size: 1.0rem;
+}
+
+.footer-iconTop {
+    display: flex;
+    align-items: center;
+    padding: .8rem;
+    background: #00abf0;
+    border: .2rem solid #00abf0;
+    border-radius: .6rem;
+    position: relative;
+}
+
+/* .footer-iconTop::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #112e42;
+    border-radius: .6rem;
+    z-index: -1;
+  } */
+
+.footer-iconTop a i {
+    font-size: 2.4rem;
+    color: #081b29;
+}
+
+.tentang1-img {
+    position: relative;
+    width: 25rem;
+    height: 26rem;
+    border-radius: 50%;
+    overflow: hidden;
+    /* Menambahkan overflow untuk memastikan konten gambar tidak keluar dari lingkaran */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.tentang1-img img {
+    width: 90%;
+    /* Menggunakan 100% untuk memastikan gambar mengisi seluruh area kontainer */
+    border-radius: 50%;
+    border: 0.2rem solid #00abf0;
+    /* Mengubah "solod" menjadi "solid" dan menyesuaikan properti border */
+}
+
+.tentang1-img .circle-spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-top: .2rem solid #081b28;
+    border-bottom: .2rem solid #081b28;
+    border-left: .2rem solid #00abf0;
+    border-right: .2rem solid #00abf0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.photo-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* Mengatur vertikal alignment ke atas */
+    padding: 20px;
+}
+
+.heading1 {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.photo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Mengatur vertikal alignment menjadi center */
+    width: 100%;
+    margin-top: 20px;
+}
+
+.photo {
+    margin: 0 10px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    max-width: 250px;
+}
+
+.photo img {
+    max-width: 200%;
+    max-height: 250px;
+    border: 2px solid #00abf0;
+    transition: transform 0.3s ease;
+}
+
+.photo:hover img {
+    transform: scale(1.1);
+}
+
+.photo-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: #dedede;
+    font-size: 14px;
+    opacity: 0;
+    background-color: transparent;
+    padding: 10px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: opacity 0.3s ease;
+}
+
+.photo:hover .photo-caption {
+    opacity: 1;
+}
